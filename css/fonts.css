@@ -1,0 +1,31 @@
+/* font-family: "RobotoRegular"; */
+@font-face {
+	font-family: "Gotham";
+	src: url("../fonts/gotham/gotham.eot");
+	src: url("../fonts/gotham/gotham.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/gotham/gotham.woff") format("woff"),
+	url("../fonts/gotham/gotham.ttf") format("truetype"),
+	url("../fonts/gotham/gotham.svg#Gotham") format("svg");
+	font-style: 400;
+	font-weight: normal;
+}
+@font-face {
+	font-family: "Gotham";
+	src: url("../fonts/gotham/gothammedium.eot");
+	src: url("../fonts/gotham/gothammedium.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/gotham/gothammedium.woff") format("woff"),
+	url("../fonts/gotham/gothammedium.ttf") format("truetype"),
+	url("../fonts/gotham/gothammedium.svg#Gotham") format("svg");
+	font-style: normal;
+	font-weight: 600;
+}
+@font-face {
+	font-family: "Gotham";
+	src: url("../fonts/gotham/gothambold.eot");
+	src: url("../fonts/gotham/gothambold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/gotham/gothambold.woff") format("woff"),
+	url("../fonts/gotham/gothambold.ttf") format("truetype"),
+	url("../fonts/gotham/gothambold.svg#Gotham") format("svg");
+	font-style: normal;
+	font-weight: 700;
+}
