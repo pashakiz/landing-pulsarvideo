@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+	// записываем значение цены по умолчанию (без опций)
+	var PRICE_TOTAL_DEFAULT = +$(".price_total").html();
+
 	// заказать звонок в шапке
 	$(".callback-btn").on("click", function() {
 		$("#callback-popup").slideToggle();
@@ -35,7 +38,18 @@ $(document).ready(function() {
 
 	// Выбор типа съемки (click)
 	$(".item").on("click", function() {
-		if ( !$(this).find(".label").hasClass("active") ) {
+
+		// показываем к каждому типу съемки уникальный (свой) блок с чекбоксами
+		$(".option").hide();
+		var n = $("#order").find(".item").length;
+		for (var i=1; i<=n; i++) {
+			if ( $(this).hasClass("item"+i) ) {
+				$(".option_item"+i).show();
+			}
+		}
+
+		// анимация клика
+		if ( !$(this).find(".label").hasClass("active") ) { // Если this НЕ active
 			$(".item .label.active").animate({
 					height: "50px",
 					paddingTop: "13px"
@@ -49,35 +63,30 @@ $(document).ready(function() {
 			$(this).children("input.rb").prop("checked", true); //выбераем радиобаттон, выбранного типа съемки
 
 			$("#order input.cb").prop("checked", false); //обуляем все чекбоксы тоже
-			$(".price_total").html("3500"); //сбрасываем значение суммы на начальную
+			$("#order .checkbox").removeClass("checked"); //обуляем все чекбоксы тоже
+
+			$("#order .checkbox.default_checked").addClass("checked"); //Выбераем чекбокс -Свои пожелания- по умолчанию
+			$("#order .checkbox.default_checked input.cb").prop("checked", true);
+
+			$(".price_total").html(PRICE_TOTAL_DEFAULT); //сбрасываем значение суммы на начальную
 			
-			var image = $(this).css("background-image");
+			var image = $(this).css("background-image"); //в блоке result меняем фоновую картинку на фоновую картинку this
 			$(".result").css("background-image", image);
 		}
 
 	});
-	// показываем к каждому типу съемки уникальный (свой) блок с чекбоксами
-	$(".item").on("click", function() {
-		$(".option").hide();
-		var n = $("#order").find(".item").length;
-		for (var i=1; i<=n; i++) {
-			if ( $(this).hasClass("item"+i) ) {
-				$(".option_item"+i).show();
-			}
-		}
-	});
 
-	// клик по чекбоксу
+	// клик по чекбоксу (выбор опции)
 	$(".checkbox").on("click", function() {
 		var isCheked = $(this).find("input.cb").prop("checked");
 		var summ = +$(".price_total").html();
 		if (isCheked) {
 			$(this).find("input.cb").prop("checked", false);
-			$(this).find(".check-title").removeClass("checked");
+			$(this).removeClass("checked");
 			summ -= +$(this).find("input.cb").val();
 		} else {
 			$(this).find("input.cb").prop("checked", true);
-			$(this).find(".check-title").addClass("checked");
+			$(this).addClass("checked");
 			summ += +$(this).find("input.cb").val();
 		}
 		$(".price_total").html(summ);

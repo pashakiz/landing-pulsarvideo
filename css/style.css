@@ -90,7 +90,7 @@ header .contacts .phone {
 header .contacts .callback-btn {
 	font-size: 20px;
 	line-height: 34px;
-	color: #fff;
+	color: #E62F2C;
 	text-decoration: underline;
 	cursor: pointer;
 	background-color: transparent;
@@ -100,7 +100,7 @@ header .contacts .callback-btn {
 }
 header .contacts .callback-btn:hover {
 	font-size: 20px;
-	color: #E62F2C;
+	color: #94040E;
 }
 #callback-popup {
 	display: none;
@@ -309,7 +309,7 @@ section.order .calculate .calc .check .check-title:before {
 	margin-right: 8px;
 	vertical-align: sub;
 }
-section.order .calculate .calc .check .check-title.checked:before {
+section.order .calculate .calc .check .checkbox.checked .check-title:before {
 	background-position: 0 -24px;
 }
 section.order .calculate .calc .check .btn-help {
