@@ -54,7 +54,7 @@ h2 {
 	background-color: #E62F2C !important;
 }
 .red {
-	color: red;
+	color: #E62F2C;
 }
 body {
 	font-family: "Gotham", sans-serif;
@@ -69,15 +69,40 @@ header {
 }
 header .logo {
 	font-size: 30px;
-	line-height: 36px;
+	line-height: 20px;
 	font-weight: 400;
 	text-transform: uppercase;
-	margin-top: 20px;
+	margin-top: 18px;
 	text-align: center;
 }
 header .logo > span {
-	color: #E62F2C;
 	font-weight: 700;
+}
+header .logo > span.prod {
+	color: #fff;
+	font-size: 15px;
+	letter-spacing: 13px;
+	line-height: 20px;
+}
+header .nav {
+	float: left;
+	padding-top: 10px;
+}
+header .nav ul {
+	list-style: none;
+}
+header .nav ul li {
+	float: left;
+	margin-right: 10px;
+}
+header .nav ul li:last-child {
+	margin-right: 0;
+}
+header .nav ul li a {
+	color: #fff;
+}
+header .nav ul li a:hover {
+	color: #E62F2C;
 }
 header .contacts {
 	margin-top: 15px;
