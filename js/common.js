@@ -127,6 +127,12 @@ $(document).ready(function() {
 	//Документация: http://fancyapps.com/fancybox/
 	// $(".fancybox").fancybox();
 
+	//Навигация по Landing Page
+	//$(".top_mnu") - это верхняя панель со ссылками.
+	//Ссылки вида <a href="#contacts">Контакты</a>
+	//см. переменную topMenuHeight в navigation.js для отступа к блоку
+	$(".top_mnu").navigation();
+
 	//Добавляет классы дочерним блокам .block для анимации
 	//Документация: http://imakewebthings.com/jquery-waypoints/
 	// $(".block").waypoint(function(direction) {
@@ -186,7 +192,7 @@ $(document).ready(function() {
 		});
 		return false;
 	});
-	$("form#order").submit(function() {
+	$("form#order-calc").submit(function() {
 		$("#summ-order").val( $("span.price_total").html() ); //записываем значение суммы заказа в скрытый интуп перед отправкой
 		$.ajax({
 			type: "POST",

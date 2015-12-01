@@ -25,11 +25,11 @@
 		<div class="container">
 			<div class="logo"><span class="red">Pulsar</span>Video<br><span class="prod">Production</span></div>
 			<div class="nav">
-				<ul>
-					<li><a href="#">Заказать</a></li>
-					<li><a href="#">Партнеры</a></li>
-					<li><a href="#">Портфолио</a></li>
-					<li><a href="#">Отзывы</a></li>
+				<ul class="top_mnu">
+					<li><a href="#order">Заказать</a></li>
+					<li><a href="#partners">Партнеры</a></li>
+					<li><a href="#sure">Портфолио</a></li>
+					<li><a href="#reviews">Отзывы</a></li>
 				</ul>
 			</div>
 			<div class="contacts">
@@ -53,10 +53,10 @@
 			<a href="#" class="btn btn-sure">Убедиться</a>
 		</div>
 	</section>
-	<section class="order">
+	<section class="order" id="order">
 		<div class="container">
 			<h2>Хочу заказать съемку:</h2>
-			<form id="order" action="" method="post">
+			<form id="order-calc" action="" method="post">
 				<div class="blocks clearfix">
 					<input class="rb" type="radio" name="videotype" value="noselect" checked="checked">
 					<div class="item item1">
@@ -307,7 +307,7 @@
 			</form>
 		</div>
 	</section>
-	<section class="partners">
+	<section class="partners" id="partners">
 		<div class="container">
 			<h2>Партнеры</h2>
 			<a href="http://school.skolkovo.ru/" class="hover p_skolkovo" target="_blank"></a>
@@ -326,7 +326,7 @@
 		http://www.youtube.com/v/VIDEO_ID?version=3&loop=1&playlist=VIDEO_ID-->
 		<iframe src="http://www.youtube.com/v/j5NhQbzZnjU?version=3&amp;loop=1&amp;autoplay=1&amp;playlist=j5NhQbzZnjU&amp;rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 	</section>
-	<section class="reviews">
+	<section class="reviews" id="reviews">
 		<div class="container">
 			<h2>Отзывы</h2>
 			<div class="owl-carousel">
@@ -384,12 +384,13 @@
 	<script src="js/jquery.stellar.min.js"></script>
 	<script src="js/jquery.scrollTo.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/navigation.js"></script>
 	<script src="js/common.js"></script>
 
 	<!--
 	<script src="js/jquery.mousewheel.min.js"></script>
-	<script src="js/fancybox/jquery.fancybox.pack.js"></script>
 	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/fancybox/jquery.fancybox.pack.js"></script>
 	-->
 
 	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
