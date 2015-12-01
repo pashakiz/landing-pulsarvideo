@@ -41,10 +41,12 @@ $(document).ready(function() {
 
 		// показываем к каждому типу съемки уникальный (свой) блок с чекбоксами
 		$(".option").hide();
+		$(".videotype").hide();
 		var n = $("#order").find(".item").length;
 		for (var i=1; i<=n; i++) {
 			if ( $(this).hasClass("item"+i) ) {
 				$(".option_item"+i).show();
+				$(".video_item"+i).show();
 			}
 		}
 
@@ -168,6 +170,57 @@ $(document).ready(function() {
 	// 		scrollTop: 0
 	// 	}, 800);
 	// 	return false;
+	// });
+
+	var video = $("#videoplayer")[0];
+
+	$("#play-pause").on("click", function() {
+		if(video.paused) {
+			video.play();
+			$("#play-pause").html("Pause");
+		} else {
+			video.pause();
+			$("#play-pause").html("Play");
+		}
+	});
+
+	$("#mute").on("click", function() {
+		if( video.muted == false ) {
+			video.muted = true;
+			$("#mute").html("Unmute");
+		} else {
+			video.muted = false;
+			$("#mute").html("Mute");
+		}
+	});
+
+	$("#full-screen").on("click", function() {
+		if (video.requestFullscreen) {
+			video.requestFullscreen();
+		} else if (video.mozRequestFullScreen) {
+			video.mozRequestFullScreen(); // Firefox
+		} else if (video.webkitRequestFullscreen) {
+			video.webkitRequestFullscreen(); // Chrome and Safari
+		}
+	});
+
+	$("#volume-bar").on("change", function() {
+		console.log( $("#volume-bar").value );
+		video.volume = $("#volume-bar").value;
+	});
+
+	// $("#seek-bar").on("change", function() {
+	// 	// Calculate the new time
+	// 	var time = video.duration * ($("#seek-bar").value / 100);
+	// 	// Update the video time
+	// 	video.currentTime = time;
+	// });
+	// // Update the seek bar as the video plays
+	// video.on("timeupdate", function() {
+	// 	// Calculate the slider value
+	// 	var value = (100 / video.duration) * video.currentTime;
+	// 	// Update the slider value
+	// 	seekBar.value = value;
 	// });
 	
 	//Аякс отправка форм

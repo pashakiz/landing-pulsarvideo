@@ -295,6 +295,21 @@
 					</div>
 					<div class="result">
 						<div class="label">Мое итоговое видео</div>
+						<video class="videotype video_item1" autoplay loop muted poster="img/conferences.jpg">
+							<source src="http://stuff.lectoriy.mipt.ru/videos/landing/conference.mp4" type="video/mp4">
+						</video>
+						<video class="videotype video_item2" autoplay loop muted poster="img/presentations.jpg">
+							<source src="http://stuff.lectoriy.mipt.ru/videos/landing/presentation.mp4" type="video/mp4">
+						</video>
+						<video class="videotype video_item3" autoplay loop muted poster="img/tranings.jpg">
+							<source src="http://stuff.lectoriy.mipt.ru/videos/landing/training.mp4" type="video/mp4">
+						</video>
+						<video class="videotype video_item4" autoplay loop muted poster="img/seminars.jpg">
+							<source src="http://stuff.lectoriy.mipt.ru/videos/landing/seminar.mp4" type="video/mp4">
+						</video>
+						<video class="videotype video_item5" autoplay loop muted poster="img/lectures.jpg">
+							<source src="http://stuff.lectoriy.mipt.ru/videos/landing/lecture.mp4" type="video/mp4">
+						</video>
 					</div>
 				</div>
 				<div class="order-finish">
@@ -320,11 +335,18 @@
 		</div>
 	</section>
 	<section id="sure" class="video">
-		<!--<iframe src="https://player.vimeo.com/video/145241713?loop=1&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
-		<!--<iframe src="https://player.vimeo.com/video/70032068?title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
-		<!-- https://www.youtube.com/embed/xF2saXGl-II?autoplay=1&amp;loop=1&amp;rel=0&amp;controls=0&amp;showinfo=0
-		http://www.youtube.com/v/VIDEO_ID?version=3&loop=1&playlist=VIDEO_ID-->
-		<iframe src="http://www.youtube.com/v/j5NhQbzZnjU?version=3&amp;loop=1&amp;autoplay=1&amp;playlist=j5NhQbzZnjU&amp;rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+		<video id="videoplayer" loop poster="img/poster_showreel.jpg">
+			<source src="http://stuff.lectoriy.mipt.ru/videos/landing/showreel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+			Элемент video не поддерживается вашим браузером.<br><a href="http://stuff.lectoriy.mipt.ru/videos/landing/showreel.mp4">Скачайте видео</a>.
+		</video>
+		<!-- Video Controls -->
+		<div id="video-controls">
+			<button type="button" id="play-pause">Play</button>
+			<!--<input type="range" id="seek-bar" value="0">-->
+			<button type="button" id="mute">Mute</button>
+			<input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
+			<button type="button" id="full-screen">Full-Screen</button>
+		</div>
 	</section>
 	<section class="reviews" id="reviews">
 		<div class="container">
