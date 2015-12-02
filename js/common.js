@@ -172,29 +172,48 @@ $(document).ready(function() {
 	// 	return false;
 	// });
 
-	var video = $("#videoplayer")[0];
+	//-HTML5 VIDEO PLAYER (begin)--------------------------------------------
+	var video = $("#videoplayer")[0],
+		BtnPlayPause  = $(".video-btn-play-pause"),
+		BtnPlayPauseImage = BtnPlayPause.css("background-image"),
+		BtnMute = $(".video-btn-mute"),
+		BtnFullScreen = $(".video-btn-full-screen"),
+		BtnVolumeBar = $(".video-btn-volume-bar");
 
-	$("#play-pause").on("click", function() {
+	$("#video-controls").on("mouseover mousemove", function() {
+		if(!video.paused) {
+			BtnMute.show();
+			BtnFullScreen.show();
+			BtnVolumeBar.show();
+		}
+	});
+	$("#video-controls").on("mouseout", function() {
+		BtnMute.hide();
+		BtnFullScreen.hide();
+		BtnVolumeBar.hide();
+	});
+
+	BtnPlayPause.on("click", function() {
 		if(video.paused) {
 			video.play();
-			$("#play-pause").html("Pause");
+			BtnPlayPause.css("background-image", "none");
 		} else {
 			video.pause();
-			$("#play-pause").html("Play");
+			BtnPlayPause.css("background-image", BtnPlayPauseImage);
 		}
 	});
 
-	$("#mute").on("click", function() {
+	BtnMute.on("click", function() {
 		if( video.muted == false ) {
 			video.muted = true;
-			$("#mute").html("Unmute");
+			BtnMute.addClass("video-btn-unmute");
 		} else {
 			video.muted = false;
-			$("#mute").html("Mute");
+			BtnMute.removeClass("video-btn-unmute");
 		}
 	});
 
-	$("#full-screen").on("click", function() {
+	$(".video-btn-full-screen").on("click", function() {
 		if (video.requestFullscreen) {
 			video.requestFullscreen();
 		} else if (video.mozRequestFullScreen) {
@@ -204,14 +223,14 @@ $(document).ready(function() {
 		}
 	});
 
-	$("#volume-bar").on("change", function() {
-		console.log( $("#volume-bar").value );
-		video.volume = $("#volume-bar").value;
+	BtnVolumeBar.on("change", function() {
+		video.volume = +BtnVolumeBar.val();
 	});
+	//-HTML5 VIDEO PLAYER (end)--------------------------------------------
 
 	// $("#seek-bar").on("change", function() {
 	// 	// Calculate the new time
-	// 	var time = video.duration * ($("#seek-bar").value / 100);
+	// 	var time = video.duration * ($("#seek-bar").val() / 100);
 	// 	// Update the video time
 	// 	video.currentTime = time;
 	// });
@@ -220,7 +239,7 @@ $(document).ready(function() {
 	// 	// Calculate the slider value
 	// 	var value = (100 / video.duration) * video.currentTime;
 	// 	// Update the slider value
-	// 	seekBar.value = value;
+	// 	seekBar.val() = value;
 	// });
 	
 	//Аякс отправка форм
