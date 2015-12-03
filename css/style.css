@@ -157,6 +157,30 @@ section.image {
 	background-size: cover;
 	text-align: center;
 	color: #fff;
+	position: relative;
+	padding-bottom: 56.25%; /*(56.25% or 75%)*/
+	height: 0;
+	overflow: hidden;
+}
+section.image video.header-video {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+}
+section.image .header-video-inner {
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
 }
 section.image h1 {
 	font-size: 60px;
