@@ -1,20 +1,20 @@
 *::-webkit-input-placeholder {
-	color: #CCC2D6;
+	color: #5c5c5c;
 	opacity: 1;
 	text-align: center;
 }
 *:-moz-placeholder {
-	color: #CCC2D6;
+	color: #5c5c5c;
 	opacity: 1;
 	text-align: center;
 }
 *::-moz-placeholder {
-	color: #CCC2D6;
+	color: #5c5c5c;
 	opacity: 1;
 	text-align: center;
 }
 *:-ms-input-placeholder {
-	color: #CCC2D6;
+	color: #5c5c5c;
 	opacity: 1;
 	text-align: center;
 }
@@ -33,7 +33,6 @@ h2 {
 	text-align: center;
 	line-height: 36px;
 	font-weight: 400;
-	color: #253166;
 }
 #summ-order {
 	display: none;
@@ -50,7 +49,7 @@ body {
 }
 header {
 	width: 100%;
-	background-color: #E8E8E8; /*001437*/
+	background-color: #E8E8E8;
 	color: #333;
 	padding-bottom: 30px;
 
@@ -119,17 +118,18 @@ header .contacts .callback-btn:hover {
 }
 #callback-popup {
 	display: none;
-	background-color: rgba(0,20,55,0.9);
+	background-color: #004B95;
 	padding: 25px 20px 20px;
 	width: 265px;
 	position: relative;
 	right: -20px;
+	top: 7px;
 }
 #callback-popup form input {
 	display: block;
 	width: 100%;
-	background-color: #4E5D8C;
-	border: 1px solid #fff;
+	background-color: #D5DBEA;
+	border: none;
 	margin: 0 auto 18px;
 	padding: 10px 5px;
 	text-align: center;
@@ -137,14 +137,16 @@ header .contacts .callback-btn:hover {
 #callback-popup form button {
 	display: block;
 	width: 100%;
-	background-color: transparent;
+	background-color: #f4f4f4;
 	margin: 20px auto 0;
+	border: none;
+	color: #333;
+}
+#callback-popup form button:hover {
+	background-color: #E62F2C;
+	color: #fff;
 }
 section.image {
-	height: 591px;
-	/*background-image: url(../img/main.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;*/
 	text-align: center;
 	color: #fff;
 	position: relative;
@@ -242,7 +244,6 @@ section.order .blocks .item.item6 {
 	background-image: url(../img/other.jpg);
 }
 section.order .blocks .item .label {
-	/*background-color: rgba(0,20,55,0.65);*/
 	background-color: rgba(52,52,52,0.5);
 	padding: 13px 5px;
 	color: #FFFFFF;
@@ -291,11 +292,10 @@ section.order .blocks .item .label {
 	transition: padding 0.3s ease;*/
 }
 section.order .blocks .item:hover .label {
-	/*background-color: rgba(0,20,55,0.8);*/
 	background-color: rgba(52,52,52,0.5);
 }
 section.order .blocks .item .label.active {
-	background-color: rgba(200,0,0,0.8);
+	background-color: rgba(22,121,215,0.8);
 	height: 100%;
 	padding-top: 95px;
 }
@@ -316,12 +316,13 @@ section.order .calculate .calc .option_item6 {
 section.order .calculate .calc span.price {
 	font-size: 24px;
 	line-height: 29px;
+	position: relative;
+	bottom: -14px;
 }
 section.order .calculate .calc span.price .price_total {
 	font-weight: 700;
 }
 section.order .calculate .calc .title {
-	color: #001437;
 	font-size: 24px;
 	text-align: left;
 	line-height: 29px;
@@ -339,7 +340,6 @@ section.order .calculate .calc .check .checkbox {
 section.order .calculate .calc .check .check-title {
 	display: inline-block;
 	width: 350px;
-	color: #001437;
 	font-size: 18px;
 	line-height: 24px;
 }
@@ -360,7 +360,7 @@ section.order .calculate .calc .check .btn-help {
 	display: inline-block;
 	width: 23px;
 	height: 23px;
-	border: 1px solid #001437;
+	border: 1px solid #333;
 	-webkit-border-radius: 23px;
 	-moz-border-radius: 23px;
 	border-radius: 23px;
@@ -399,7 +399,7 @@ section.order .calculate .calc .check .free {
 	font-weight: 600;
 }
 section.order .calculate .calc .btn-order {
-	background-color: #004B95; /*253166 94040E*/
+	background-color: #004B95;
 	margin: 10px 40px 15px 0;
 	outline: none;
 }
@@ -421,7 +421,6 @@ section.order .calculate .result {
 	overflow: hidden;
 }
 section.order .calculate .result .label {
-	/*background-color: rgba(0,20,55,0.65);*/
 	background-color: rgba(52,52,52,0.5);
 	padding: 13px 5px;
 	color: #FFFFFF;
@@ -443,9 +442,7 @@ section.order .calculate .result video {
 }
 section.order .order-finish {
 	display: none;
-	/*background-color: #253166;
-	background-image: url(../img/pattern.png);*/
-	background-color: #E8E8E8;
+	background-color: #004B95;
 	background-repeat: repeat;
 	text-align: center;
 	padding: 30px;
@@ -454,9 +451,8 @@ section.order .order-finish {
 section.order .order-finish input {
 	display: block;
 	width: 100%;
-	background-color: #4E5D8C;
-	color: #fff;
-	border: 1px solid #fff;
+	background-color: #D6D6D6;
+	border: 1px solid #000;
 	margin: 0 auto 18px;
 	padding: 10px 5px;
 	text-align: center;
@@ -464,11 +460,14 @@ section.order .order-finish input {
 section.order .order-finish button {
 	display: block;
 	width: 100%;
-	background-color: transparent;
+	background-color: #f4f4f4;
+	color: #333;
+	border: 1px solid #000;
 	margin: 25px auto 0;
 }
 section.order .order-finish button:hover {
-	background-color: #004B95;
+	background-color: #E62F2C;
+	color: #fff;
 }
 section.partners {
 	background-color: #EFEFEF;
@@ -665,7 +664,6 @@ section.reviews .owl-carousel .item img {
 }
 section.reviews .owl-carousel .item .text {
 	margin-top: 10px;
-	color: #253166;
 	font-size: 16px;
 	line-height: 19px;
 	text-align: center;
@@ -711,9 +709,7 @@ section.reviews .owl-carousel .owl-next .next:active {
 	background-position: -24px -120px;
 }
 section.callback {
-	background-color: #253166;
-	background-image: url(../img/pattern.png);
-	background-repeat: repeat;
+	background-color: #004B95;
 	padding-bottom: 60px;
 	text-align: center;
 }
@@ -724,9 +720,8 @@ section.callback h2 {
 section.callback form input {
 	display: block;
 	width: 100%;
-	background-color: #4E5D8C;
-	color: #fff;
-	border: 1px solid #fff;
+	background-color: #D6D6D6;
+	border: 1px solid #000;
 	margin: 0 auto 18px;
 	padding: 10px 5px;
 	text-align: center;
@@ -734,17 +729,24 @@ section.callback form input {
 section.callback form button {
 	display: block;
 	width: 100%;
-	background-color: transparent;
+	background-color: #f4f4f4;
 	margin: 25px auto 0;
+	border: 1px solid #000;
+	color: #333;
+}
+section.callback form button:hover {
+	background-color: #E62F2C;
+	color: #fff;
 }
 footer {
-	height: 66px;
-	background-color: #E8E8E8; /*001437*/
-	color: #4E5D8C;
+	background-color: #E8E8E8;
 	padding-bottom: 20px;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 19px;
 	padding-top: 15px;
+}
+footer a:hover {
+	text-decoration: underline;
 }
 footer .copyright {
 	text-align: center;
@@ -761,7 +763,4 @@ footer .footer-phone {
 	font-size: 19px;
 	padding: 20px 25px;
 	text-transform: uppercase;
-}
-.btn:hover {
-	background-color: #E62F2C;
 }

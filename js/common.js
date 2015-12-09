@@ -120,10 +120,10 @@ $(document).ready(function() {
 
 	//Parallax (Stellar)
 	//Документация: http://markdalgleish.com/projects/stellar.js/docs/
-	$.stellar({
-		horizontalScrolling: false,
-		verticalOffset: 0
-	});
+	// $.stellar({
+	// 	horizontalScrolling: false,
+	// 	verticalOffset: 0
+	// });
 
 	//Попап менеджер FancyBox
 	//Документация: http://fancyapps.com/fancybox/
@@ -228,19 +228,6 @@ $(document).ready(function() {
 	});
 	//-HTML5 VIDEO PLAYER (end)--------------------------------------------
 
-	// $("#seek-bar").on("change", function() {
-	// 	// Calculate the new time
-	// 	var time = video.duration * ($("#seek-bar").val() / 100);
-	// 	// Update the video time
-	// 	video.currentTime = time;
-	// });
-	// // Update the seek bar as the video plays
-	// video.on("timeupdate", function() {
-	// 	// Calculate the slider value
-	// 	var value = (100 / video.duration) * video.currentTime;
-	// 	// Update the slider value
-	// 	seekBar.val() = value;
-	// });
 	
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
